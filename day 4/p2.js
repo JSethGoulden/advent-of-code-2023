@@ -16,13 +16,11 @@ data.forEach((card, cardIndex) => {
         if (winningNumbers.includes(num)) matches++
     })
 
-    if (matches) {
-        for (let i = 1; i <= matches; i++) {
-            console.log(`Adding ${cards[cardIndex]} cards to card at index ${i + cardIndex}`)
-            cards[cardIndex + i] += cards[cardIndex]
-        }
-    }
+    if (!matches) return
 
+    for (let i = 1; i <= matches; i++) {
+        cards[cardIndex + i] += cards[cardIndex]
+    }
 })
 
 console.log(cards.reduce((total, current) => total + current))

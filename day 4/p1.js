@@ -9,13 +9,12 @@ data.forEach(card => {
     card = card.split(':')[1].split('|')
 
     let winningNumbers = card[0].trim().split(' ')
-    let myNumbers = card[1].trim().split(' ')
+    let myNumbers = card[1].trim().split(' ').filter(num => num)
 
     console.log(`${winningNumbers}`)
     let matches = 0
 
     myNumbers.forEach(num => {
-        if (num == '') return
         if (winningNumbers.includes(num)) matches++
     })
 

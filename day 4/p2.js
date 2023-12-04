@@ -1,4 +1,3 @@
-const { match } = require('assert')
 const fs = require('fs')
 
 let data = fs.readFileSync('./day 4/data.txt').toString().split('\r\n')

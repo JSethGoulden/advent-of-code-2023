@@ -1,13 +1,3 @@
-const fs = require('fs')
-
-let data = fs.readFileSync('./day 3/data.txt').toString().split('\r\n')
-
-//example
-// let races = [
-//     { time: 71530, targetDistance: 940200 },
-// ]
-
-//input
 let races = [
     { time: 49877895, targetDistance: 356137815021882 },
 ]
